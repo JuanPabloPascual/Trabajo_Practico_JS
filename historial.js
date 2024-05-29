@@ -73,12 +73,17 @@ const HISTORIAL= [
     },
 ]   
 
-console.log(renderizarHistorial(HISTORIAL));
+function renderizarHistorial(HISTORIAL){ 
 
-function renderizarHistorial(historial) {
+    let listaHistorial = '' // acumulador de string vacio 
+    for (const item of HISTORIAL)
 
-    historial.forEach(string)
-    
-    return 
+    { listaHistorial = listaHistorial + `
+    Accion: ${item.accion}
+    Operacion: ${item.operacion}
+    Numeros: ${item.a}, ${item.b}
+    Resultado: ${item.resultado}
+    `
+    } return listaHistorial
 }
-
+alert(renderizarHistorial(HISTORIAL))
